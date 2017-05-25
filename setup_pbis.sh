@@ -12,13 +12,9 @@ else
 
 #Grab variables
 
-echo "What is your domain?"
+DOMAIN=$(whiptail --title "Domain Input Form" --inputbox "What is your Active Directory Domain?" 10 60  3>&1 1>&2 2>&3)
 
-read DOMAIN
-
-echo "What is your administrator username?"
-
-read ADMINUSER
+ADMINUSER=$(whiptail --title "Admin User Form" --inputbox "What is your Administrative User Name?" 10 60  3>&1 1>&2 2>&3)
 
 ##See if WGET is installed and if not, install it
 
